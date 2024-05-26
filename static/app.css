@@ -1,0 +1,91 @@
+html,
+body {
+    margin: 0;
+}
+
+.container {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+#form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#form input[type="text"] {
+    font-size: 1.5rem;
+    outline: 0;
+    border: 2px solid white;
+    background-color: #f2f2f2;
+    padding: 15px;
+    width: 400px;
+}
+
+.btn {
+    background-color: #a04caf;
+    padding: 15px;
+    font-size: 1.5rem;
+    color: white;
+    border: 2px solid white;
+    transition: 0.2s opacity;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.color {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    transition: 0.2s opacity;
+}
+
+.color:active {
+    opacity: 0.8;
+}
+
+.color span {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+/* Ajoutez cette partie à la fin de votre fichier CSS */
+
+.btn.loading {
+    position: relative;
+    color: transparent;
+}
+
+.btn.loading:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+    border-top: 3px solid #a04caf;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
