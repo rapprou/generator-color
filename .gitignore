@@ -1,5 +1,16 @@
+# Ignorer les fichiers d'environnement
 .env
+
+# Ignorer le dossier de l'environnement virtuel
 .venv/
+
+# Ignorer les fichiers de configuration de l'éditeur
+.vscode/
+.idea/
 
 # Ignorer les fichiers de log
 *.log
+
+# Ignorer les fichiers de cache Python
+__pycache__/
+*.pyc
